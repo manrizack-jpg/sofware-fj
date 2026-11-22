@@ -1,0 +1,75 @@
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Registrar cliente válido (Ana Gómez) | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #1 finalizada
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Registrar cliente válido (Carlos Ruiz) | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #2 finalizada
+2026-11-21 00:06:14,095 | ERROR    | software_fj.gestor | Registrar cliente con correo inválido | FALLÓ | [SFJ-102] Correo electrónico inválido (luis-correo)
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #3 finalizada
+2026-11-21 00:06:14,095 | ERROR    | software_fj.gestor | Registrar cliente con documento duplicado | FALLÓ | [SFJ-200] El cliente ya está registrado (id/doc: CLI-004/1012345678)
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #4 finalizada
+2026-11-21 00:06:14,095 | ERROR    | software_fj.gestor | Registrar cliente sin nombre (parámetro faltante) | FALLÓ | [SFJ-101] Falta el campo obligatorio 'nombre'
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #5 finalizada
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Registrar servicio: sala con proyector | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #6 finalizada
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Registrar servicio: alquiler de equipos | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #7 finalizada
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Registrar servicio: asesoría senior | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #8 finalizada
+2026-11-21 00:06:14,095 | ERROR    | software_fj.gestor | Crear servicio con tarifa negativa | FALLÓ | [SFJ-104] La tarifa por hora debe ser mayor que 0 (-100)
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #9 finalizada
+2026-11-21 00:06:14,095 | INFO     | software_fj.gestor | Reserva válida de sala (Ana, 3 h, 8 asistentes) | OK
+2026-11-21 00:06:14,095 | DEBUG    | software_fj.gestor | Operación #10 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.reserva | Reserva RES-001 confirmada
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Confirmar reserva RES-001 | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #11 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.reserva | Reserva RES-001 procesada. Total: $214,200.00
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.reserva | Intento de procesamiento de la reserva RES-001 finalizado
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Procesar reserva RES-001 (IVA 19 %) | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #12 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Reserva de equipos con descuento del 10 % (Carlos, 24 h, 2 unidades) | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #13 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.reserva | Reserva RES-002 confirmada
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Confirmar reserva RES-002 | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #14 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.reserva | Reserva RES-002 procesada. Total: $1,028,160.00
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.reserva | Intento de procesamiento de la reserva RES-002 finalizado
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Procesar reserva RES-002 | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #15 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Reserva inválida: asistentes superan la capacidad | FALLÓ | [SFJ-103] Los asistentes superan la capacidad de la sala (25 > 10)
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #16 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Reserva inválida: duración de 0 horas | FALLÓ | [SFJ-103] Duración fuera de rango para Asesoría (permitido: 0 < horas <= 6)
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #17 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Reserva con cliente inexistente | FALLÓ | [SFJ-201] No existe cliente con id 'CLI-999'
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #18 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Reserva con parámetro faltante (sin id de servicio) | FALLÓ | [SFJ-101] Falta el identificador de servicio
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #19 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Reserva de servicio no disponible (equipos) | FALLÓ | [SFJ-300] El servicio 'Portátiles Pro' no está disponible (EQ-01)
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #20 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Reserva de asesoría presencial (Ana, 2 h) | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #21 finalizada
+2026-11-21 00:06:14,096 | INFO     | software_fj.reserva | Reserva RES-008 cancelada. Motivo: Cambio de agenda
+2026-11-21 00:06:14,096 | INFO     | software_fj.gestor | Cancelar reserva RES-008 | OK
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #22 finalizada
+2026-11-21 00:06:14,096 | ERROR    | software_fj.gestor | Cancelar de nuevo RES-008 (operación no permitida) | FALLÓ | [SFJ-302] La reserva no se puede cancelar (estado actual: CANCELADA)
+2026-11-21 00:06:14,096 | DEBUG    | software_fj.gestor | Operación #23 finalizada
+2026-11-21 00:06:14,097 | ERROR    | software_fj.gestor | Procesar RES-008 cancelada (operación no permitida) | FALLÓ | [SFJ-302] Solo se puede procesar una reserva confirmada (estado actual: CANCELADA)
+2026-11-21 00:06:14,097 | DEBUG    | software_fj.gestor | Operación #24 finalizada
+2026-11-21 00:06:14,097 | INFO     | software_fj.gestor | Reserva con descuento del 150 % (se detecta al procesar) | OK
+2026-11-21 00:06:14,097 | DEBUG    | software_fj.gestor | Operación #25 finalizada
+2026-11-21 00:06:14,097 | INFO     | software_fj.reserva | Reserva RES-009 confirmada
+2026-11-21 00:06:14,097 | INFO     | software_fj.gestor | Confirmar RES-009 | OK
+2026-11-21 00:06:14,097 | DEBUG    | software_fj.gestor | Operación #26 finalizada
+2026-11-21 00:06:14,097 | DEBUG    | software_fj.reserva | Intento de procesamiento de la reserva RES-009 finalizado
+2026-11-21 00:06:14,097 | ERROR    | software_fj.gestor | Procesar RES-009 (error encadenado) | FALLÓ | [SFJ-301] No se pudo procesar la reserva RES-009
+2026-11-21 00:06:14,097 | ERROR    | software_fj.gestor |    causa original: CalculoInconsistenteError('Descuento fuera de rango')
+2026-11-21 00:06:14,097 | DEBUG    | software_fj.gestor | Operación #27 finalizada
+2026-11-21 00:06:14,097 | CRITICAL | software_fj.gestor | Operación con error inesperado (división por cero) | ERROR INESPERADO | [SFJ-999] Error no previsto durante la operación (ZeroDivisionError('division by zero'))
+Traceback (most recent call last):
+  File "/home/claude/software_fj/software_fj/gestor.py", line 104, in ejecutar
+    valor = funcion(*args, **kwargs)
+  File "/home/claude/software_fj/main.py", line 93, in <lambda>
+    op("Operación con error inesperado (división por cero)", lambda: 10 / 0)
+                                                                     ~~~^~~
+ZeroDivisionError: division by zero
+2026-11-21 00:06:14,098 | DEBUG    | software_fj.gestor | Operación #28 finalizada
+2026-11-21 00:06:14,099 | INFO     | software_fj.gestor | Reserva final tras los errores (Carlos, asesoría virtual 1 h) | OK
+2026-11-21 00:06:14,099 | DEBUG    | software_fj.gestor | Operación #29 finalizada

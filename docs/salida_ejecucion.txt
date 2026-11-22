@@ -1,0 +1,46 @@
+=== Software FJ: simulación de operaciones ===
+
+01 [OK]    Registrar cliente válido (Ana Gómez)
+02 [OK]    Registrar cliente válido (Carlos Ruiz)
+03 [ERROR] Registrar cliente con correo inválido -> [SFJ-102] Correo electrónico inválido (luis-correo)
+04 [ERROR] Registrar cliente con documento duplicado -> [SFJ-200] El cliente ya está registrado (id/doc: CLI-004/1012345678)
+05 [ERROR] Registrar cliente sin nombre (parámetro faltante) -> [SFJ-101] Falta el campo obligatorio 'nombre'
+06 [OK]    Registrar servicio: sala con proyector
+07 [OK]    Registrar servicio: alquiler de equipos
+08 [OK]    Registrar servicio: asesoría senior
+09 [ERROR] Crear servicio con tarifa negativa -> [SFJ-104] La tarifa por hora debe ser mayor que 0 (-100)
+10 [OK]    Reserva válida de sala (Ana, 3 h, 8 asistentes)
+11 [OK]    Confirmar reserva RES-001
+12 [OK]    Procesar reserva RES-001 (IVA 19 %)
+      costo total: $214,200.00
+13 [OK]    Reserva de equipos con descuento del 10 % (Carlos, 24 h, 2 unidades)
+14 [OK]    Confirmar reserva RES-002
+15 [OK]    Procesar reserva RES-002
+      costo total: $1,028,160.00
+16 [ERROR] Reserva inválida: asistentes superan la capacidad -> [SFJ-103] Los asistentes superan la capacidad de la sala (25 > 10)
+17 [ERROR] Reserva inválida: duración de 0 horas -> [SFJ-103] Duración fuera de rango para Asesoría (permitido: 0 < horas <= 6)
+18 [ERROR] Reserva con cliente inexistente -> [SFJ-201] No existe cliente con id 'CLI-999'
+19 [ERROR] Reserva con parámetro faltante (sin id de servicio) -> [SFJ-101] Falta el identificador de servicio
+20 [ERROR] Reserva de servicio no disponible (equipos) -> [SFJ-300] El servicio 'Portátiles Pro' no está disponible (EQ-01)
+21 [OK]    Reserva de asesoría presencial (Ana, 2 h)
+22 [OK]    Cancelar reserva RES-008
+23 [ERROR] Cancelar de nuevo RES-008 (operación no permitida) -> [SFJ-302] La reserva no se puede cancelar (estado actual: CANCELADA)
+24 [ERROR] Procesar RES-008 cancelada (operación no permitida) -> [SFJ-302] Solo se puede procesar una reserva confirmada (estado actual: CANCELADA)
+25 [OK]    Reserva con descuento del 150 % (se detecta al procesar)
+26 [OK]    Confirmar RES-009
+27 [ERROR] Procesar RES-009 (error encadenado) -> [SFJ-301] No se pudo procesar la reserva RES-009
+28 [ERROR] Operación con error inesperado (división por cero) -> [SFJ-999] Error no previsto durante la operación (ZeroDivisionError('division by zero'))
+29 [OK]    Reserva final tras los errores (Carlos, asesoría virtual 1 h)
+
+=== Resumen ===
+Operaciones: 29 | exitosas: 16 | con error controlado: 13
+Estado del sistema: {'clientes': 2, 'servicios': 3, 'reservas': 5, 'operaciones': 29}
+
+Reservas registradas:
+ - Reserva RES-001 | Ana Gómez -> Sala Innovación | 3 h | PROCESADA | total $214,200.00
+ - Reserva RES-002 | Carlos Ruiz -> Portátiles Pro | 24 h | PROCESADA | total $1,028,160.00
+ - Reserva RES-008 | Ana Gómez -> Asesoría en Python | 2 h | CANCELADA | total pendiente
+ - Reserva RES-009 | Carlos Ruiz -> Sala Innovación | 1 h | CONFIRMADA | total pendiente
+ - Reserva RES-010 | Carlos Ruiz -> Asesoría en Python | 1 h | PENDIENTE | total pendiente
+
+El sistema siguió estable. Log completo en: logs/software_fj.log
