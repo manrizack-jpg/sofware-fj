@@ -1,0 +1,2 @@
+# Software FJ solo usa la biblioteca estándar de Python 3.10 o superior.
+# No requiere dependencias externas ni base de datos.

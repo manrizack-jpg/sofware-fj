@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.idea/
+.vscode/
+# El log se regenera en cada ejecución; la evidencia queda en docs/
+logs/*.log
